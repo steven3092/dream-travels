@@ -1,0 +1,76 @@
+.dream-trip-card {
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: row;
+  font-family: inherit;
+  font-weight: 400;
+  margin: 40px 0px 40px 0px;
+}
+
+.dream-trip-card-image {
+  border-radius: 16px 0px 0px 16px;
+  width: 50%;
+}
+
+.dream-trip-card-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  width: 50%;
+}
+
+.dream-trip-card-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.dream-trip-card-buttons-right {
+  display: flex;
+}
+
+.dream-trip-card-button-action {
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.dream-trip-card-button-action-delete {
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  font-size: 16px;
+  color: red;
+}
+
+@media (width < 900px) {
+  .dream-trip-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .dream-trip-card-image {
+    border-radius: 16px 0px 0px 16px;
+    width: 100%;
+  }
+
+  .dream-trip-card-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    width: fit-content;
+  }
+
+  .dream-trip-card-image {
+    border-radius: 16px 16px 0px 0px;
+  }
+}
