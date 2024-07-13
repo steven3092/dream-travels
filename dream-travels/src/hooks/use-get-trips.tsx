@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchTrips } from "../services/get-trips";
-// import { UserDTO } from "../../interfaces/users.dto.interface";
+import { TripsDTO } from "../interfaces/trips.dto.interface";
 
 export function useGetTrips() {
   const query = useQuery({
@@ -9,8 +9,8 @@ export function useGetTrips() {
     retry: 0,
   });
 
-  const trips: any = query.data;
-  
+  const trips: TripsDTO[] = query.data;
+
   return {
     trips,
     isLoading: query.isLoading,
