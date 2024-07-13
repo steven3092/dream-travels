@@ -1,0 +1,35 @@
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.button-group .btn {
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  color: #121212;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-group .btn:first-child {
+  border-radius: 100px 0 0 100px;
+}
+
+.button-group .btn:last-child {
+  border-radius: 0 100px 100px 0;
+}
+
+.button-group .btn:hover,
+.button-group .btn:focus {
+  background-color: #f3f3f3;
+}
+
+.button-group .btn:not(:last-child) {
+  border-right: none;
+}
