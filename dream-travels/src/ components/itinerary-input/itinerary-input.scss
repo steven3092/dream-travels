@@ -1,0 +1,25 @@
+.itinerary-input-dropdown {
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 12px 16px 12px 16px;
+  gap: 10px;
+  border-radius: 100px;
+  min-width: 100px;
+}
+
+.itinerary-input-left {
+  width: 20%;
+  margin-top: 15px;
+}
+
+.itinerary-input-main {
+  margin: 3px 0px 5px 5px;
+}
+
+.itinerary-input-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 40px;
+}
