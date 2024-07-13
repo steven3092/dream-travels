@@ -1,0 +1,73 @@
+.trip-modal-detail {
+  max-width: 100%;
+  width: auto;
+  max-height: 90vh;
+  top: 100px;
+  left: 1224px;
+  border-radius: 16px;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.trip-modal-detail-title {
+  padding: 20px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.trip-modal-detail-image {
+  max-width: 100%;
+  max-height: 1192px;
+}
+
+.trip-modal-detail-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0px 20px 20px 20px;
+}
+
+.trip-modal-detail-styled-line {
+  border: none;
+  height: 1px;
+  background-color: #d8d8d8;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.trip-modal-detail-itinerary-title {
+  padding: 20px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.trip-modal-detail-itinerary-container {
+  padding: 0px 20px 20px 20px;
+}
+
+.trip-modal-detail-checkbox {
+  padding: 0px 20px 20px 20px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-item-label {
+  padding: 0px 5px 0px 5px;
+  color: #898989;
+}
+
+.checkbox-item-container {
+  cursor: pointer;
+  border: none;
+  background: white;
+  padding: 0px;
+}
