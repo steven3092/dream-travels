@@ -1,0 +1,26 @@
+.trip-modal-edit-itinerary {
+  display: flex;
+  flex-direction: column;
+}
+
+.trip-modal-edit-itinerary-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+}
+
+.plus-button {
+  cursor: pointer;
+}
+
+.trip-modal-edit-itinerary-container {
+  background-color: #f3f3f3;
+  border-radius: 16px;
+  padding: 10px;
+  margin: 0px 20px 20px 20px;
+  display: flex;
+  margin-right: 40px;
+  width: 90%;
+}
