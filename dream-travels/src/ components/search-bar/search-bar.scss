@@ -1,0 +1,33 @@
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 0px 80px 0px;
+}
+
+.search-bar-sub-components {
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar-title {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.search-bar-sub-title {
+  font-weight: 400;
+}
+
+.search-bar-button {
+  position: absolute;
+  margin-left: 265px;
+  width: 75px;
+  padding: 12px;
+  border-radius: 100px;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
