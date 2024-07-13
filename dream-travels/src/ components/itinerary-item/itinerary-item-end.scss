@@ -1,0 +1,41 @@
+.itinerary-item-end {
+  display: flex;
+}
+
+.itinerary-item-end-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.itinerary-item-end-itinerary-label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.itinerary-item-end-itinerary-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 0px 10px 0px;
+  color: #898989;
+}
+
+.itinerary-item-end-vertical-line {
+  width: 2px;
+  height: 10px;
+  background-color: black;
+  margin: 0px 20px 0px 20px;
+  position: relative;
+}
+
+.itinerary-item-end-point {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translate(-50%, -50%);
+}
