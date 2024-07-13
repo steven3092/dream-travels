@@ -1,0 +1,22 @@
+.trip-modal {
+  max-width: 100%;
+  width: auto;
+  max-height: 90vh;
+  //   height: 85%;
+  top: 100px;
+  left: 1224px;
+  border-radius: 16px;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.trip-modal-title {
+  padding: 20px;
+  margin: 0;
+}
+
+.trip-modal-save-button {
+  padding: 0px 20px 20px 20px;
+}
