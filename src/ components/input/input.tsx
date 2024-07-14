@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 import "./input.scss";
 
 export const Input = ({
@@ -8,14 +9,16 @@ export const Input = ({
   onChange,
   required,
   defaultValue,
+  role,
 }: {
   type: "text" | "search" | "number";
   placeholder: string;
   defaultValue?: string;
   name?: string;
   value?: string;
-  onChange?: (e: any) => void;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
+  role?: string;
 }) => {
   return (
     <>
@@ -28,6 +31,7 @@ export const Input = ({
         value={value}
         onChange={onChange}
         required={required}
+        role={role}
       />
     </>
   );
