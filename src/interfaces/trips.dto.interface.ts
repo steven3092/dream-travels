@@ -3,7 +3,7 @@ export interface TripsDTO {
   readonly itinerary: ItineraryDTO[];
   readonly description: string;
   readonly photo_url: string;
-  readonly status: string;
+  readonly status: "todo" | "completed";
   readonly title: string;
 }
 
