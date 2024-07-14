@@ -31,7 +31,7 @@ export const TripModalEdit = ({
 
     const formData = new FormData(event.target as HTMLFormElement);
 
-    const newItinerary = itineraryModalEdit.map((itinerary, index) => ({
+    const newItinerary = itineraryModalEdit.map((_itinerary, index) => ({
       day: formData.get(`select-${index}`),
       description: formData.get(`description-${index}`),
       location: formData.get(`location-${index}`),

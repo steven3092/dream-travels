@@ -2,18 +2,18 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, it, expect, vi } from "vitest";
 import { ButtonGroup } from "./button-group";
-import { useTrips } from "../../hooks/use-trips/use-trips";
-
-vi.mock("../../hooks/use-trips/use-trips", () => ({
-  useTrips: vi.fn(),
-}));
+// import { useTrips } from "../../hooks/use-trips/use-trips";
 
 const mockState = [
   { id: 1, title: "Trip to Lisbon", description: "A beautiful trip to Lisbon" },
   { id: 2, title: "Trip to Sintra", description: "A wonderful trip to Sintra" },
 ];
 
-(useTrips as vi.Mock).mockReturnValue({ state: mockState });
+vi.mock("../../hooks/use-trips/use-trips", () => ({
+  useTrips: () => ({
+    state: mockState,
+  }),
+}));
 
 const mockProps = {
   leftButton: "All Trips",

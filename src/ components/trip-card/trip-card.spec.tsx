@@ -2,18 +2,15 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, it, expect, vi } from "vitest";
 import { TripCard } from "./trip-card";
-import { useModal } from "../modal/hooks/use-modal";
-
-vi.mock("../modal/hooks/use-modal", () => ({
-  useModal: vi.fn(),
-}));
 
 const mockToggleStatus = vi.fn();
 
-(useModal as vi.Mock).mockReturnValue({
-  isOpen: false,
-  toggleStatus: mockToggleStatus,
-});
+vi.mock("../modal/hooks/use-modal", () => ({
+  useModal: () => ({
+    isOpen: false,
+    toggleStatus: mockToggleStatus(),
+  }),
+}));
 
 const mockProps = {
   photo_url: "some-image-url",

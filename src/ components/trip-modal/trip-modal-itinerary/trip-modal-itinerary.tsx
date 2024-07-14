@@ -23,7 +23,7 @@ export const TripModalItinerary = ({
         </span>
       </div>
 
-      {itineraryModal.map((itinerary, index) => (
+      {itineraryModal.map((_itinerary, index) => (
         <div key={index} className="trip-modal-itinerary-container">
           <ItineraryInput index={index} />
         </div>
