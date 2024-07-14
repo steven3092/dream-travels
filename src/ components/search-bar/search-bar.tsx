@@ -1,22 +1,16 @@
-import { ChangeEvent, useState } from "react";
-import { Button } from "../button/button";
 import { Input } from "../input/input";
 import "./search-bar.scss";
+import { useSearchBar } from "./hooks/use-search-bar";
 
 export const SearchBar = ({
   handleOnTripSearch,
 }: {
   handleOnTripSearch: (search: string) => void;
 }) => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const { searchQuery, handleSearchChange, handleSearchClick } = useSearchBar({
+    handleOnTripSearch,
+  });
 
-  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
-  };
-
-  const handleSearchClick = () => {
-    handleOnTripSearch(searchQuery);
-  };
   return (
     <div className="search-bar">
       <h1 className="search-bar-title">The place of your dream of</h1>
