@@ -1,7 +1,5 @@
-import { Input } from "../../input/input";
 import plus from "../../../assets/plus.svg";
 import "./trip-modal-edit-itinerary.scss";
-import { TextArea } from "../../textarea/textarea";
 import { ItineraryDTO } from "../../../interfaces/trips.dto.interface";
 import { ItineraryInput } from "../../itinerary-input/itinerary-input";
 
@@ -26,7 +24,11 @@ export const TripModalEditItinerary = ({
       </div>
       {itineraryModalEdit.map((itinerary, index) => (
         <div key={index} className="trip-modal-edit-itinerary-container">
-          <ItineraryInput index={index} itinerary={itinerary} />
+          <ItineraryInput
+            index={index}
+            itinerary={itinerary}
+            data-testid="itinerary-input"
+          />
         </div>
       ))}
     </div>
