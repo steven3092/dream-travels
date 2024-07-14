@@ -5,11 +5,11 @@ import "./trip-modal-edit-content.scss";
 export const TripModalEditContent = ({
   title,
   description,
-  imageUrl,
+  photo_url,
 }: {
   title: string;
   description: string;
-  imageUrl: string;
+  photo_url: string;
 }) => {
   return (
     <div className="trip-modal-edit-content">
@@ -25,7 +25,7 @@ export const TripModalEditContent = ({
       </span>
       <label>Introduction</label>
       <span className="trip-modal-edit-input">
-        <TextArea placeholder="From Rome to Venice..." name="Introduction" />
+        <TextArea placeholder="From Rome to Venice..." name="introduction" />
       </span>
       <label>Description</label>
       <span className="trip-modal-edit-input">
@@ -40,8 +40,8 @@ export const TripModalEditContent = ({
         <Input
           type="text"
           placeholder="Image URL"
-          defaultValue={imageUrl}
-          name="imageUrl"
+          defaultValue={photo_url}
+          name="photo_url"
         />
       </span>
     </div>

@@ -7,7 +7,7 @@ import "./trip-modal-edit.scss";
 import { useTripModalEditItinerary } from "./trip-modal-edit-itinerary/hooks/use-trip-modal-edit-itinerary";
 
 export const TripModalEdit = ({
-  imageUrl,
+  photo_url,
   title,
   description,
   itinerary,
@@ -15,7 +15,7 @@ export const TripModalEdit = ({
   handleOnTripEditSubmit,
   handleOnCloseModalEdit,
 }: {
-  imageUrl: string;
+  photo_url: string;
   title: string;
   description: string;
   itinerary: ItineraryDTO[];
@@ -41,7 +41,7 @@ export const TripModalEdit = ({
       id: id,
       itinerary: newItinerary as ItineraryDTO[],
       description: formData.get("description") as string,
-      photo_url: formData.get("imageUrl") as string,
+      photo_url: formData.get("photo_url") as string,
       status: "todo",
       title: formData.get("name") as string,
     };
@@ -55,12 +55,13 @@ export const TripModalEdit = ({
       className="trip-modal-edit"
       onSubmit={handleOnSubmitModalEditForm}
       id="trip-modal-edit-form"
+      data-testid="trip-modal-edit-form"
     >
       <h2 className="trip-modal-edit-title">Edit a trip</h2>
       <TripModalEditContent
         title={title}
         description={description}
-        imageUrl={imageUrl}
+        photo_url={photo_url}
       />
       <TripModalEditItinerary
         itineraryModalEdit={itineraryModalEdit}
