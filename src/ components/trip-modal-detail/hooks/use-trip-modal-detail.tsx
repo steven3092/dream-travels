@@ -5,51 +5,50 @@ import {
 } from "../../../interfaces/trips.dto.interface";
 
 export const useTripModalDetail = ({
-  imageUrl,
+  photo_url,
   title,
   description,
   itinerary,
   id,
+  status,
   handleOnTripChangeStatus,
 }: {
-  imageUrl: string;
+  photo_url: string;
   title: string;
   description: string;
   id: number;
+  status: "todo" | "completed";
   handleOnTripChangeStatus: (trip: TripsDTO) => void;
   itinerary: ItineraryDTO[];
 }) => {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState<boolean>(
+    status === "todo" ? false : true
+  );
 
   const handleOnSubmitModalDetailForm = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const tripUpdatedCompleted: TripsDTO = {
+    const formData = new FormData(event.target as HTMLFormElement);
+
+    const tripUpdated: TripsDTO = {
       id: id,
       itinerary: itinerary,
       description: description,
-      photo_url: imageUrl,
-      status: "completed",
+      photo_url: photo_url,
+      status: formData.get("status") as "todo" | "completed",
       title: title,
     };
 
-    const tripUpdatedNoCompleted: TripsDTO = {
-      id: id,
-      itinerary: itinerary,
-      description: description,
-      photo_url: imageUrl,
-      status: "todo",
-      title: title,
-    };
+    handleOnTripChangeStatus(tripUpdated);
+  };
 
+  const handleOnClickTripStatus = () => {
     setChecked(!checked);
-    handleOnTripChangeStatus(
-      !checked ? tripUpdatedCompleted : tripUpdatedNoCompleted
-    );
   };
 
   return {
     handleOnSubmitModalDetailForm,
+    handleOnClickTripStatus,
     checked,
   };
 };
