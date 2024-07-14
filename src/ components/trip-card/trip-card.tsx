@@ -6,20 +6,22 @@ import { TripModalEdit } from "../trip-modal-edit/trip-modal-edit";
 import "./trip-card.scss";
 
 export const TripCard = ({
-  imageUrl,
+  photo_url,
   title,
   description,
   itinerary,
   id,
+  status,
   handleOnTripChangeStatus,
   handleOnTripEditSubmit,
   handleOnDeleteTrip,
 }: {
-  imageUrl: string;
+  photo_url: string;
   title: string;
   description: string;
   itinerary: ItineraryDTO[];
   id: number;
+  status: "todo" | "completed";
   handleOnTripChangeStatus: (trip: TripsDTO) => void;
   handleOnTripEditSubmit: (trip: TripsDTO) => void;
   handleOnDeleteTrip: (id: number) => void;
@@ -36,7 +38,7 @@ export const TripCard = ({
   return (
     <>
       <div className="dream-trip-card">
-        <img src={imageUrl} alt="no image" className="dream-trip-card-image" />
+        <img src={photo_url} alt="no image" className="dream-trip-card-image" />
         <div className="dream-trip-card-text-content">
           <h2>{title}</h2>
           <div>{description}</div>
@@ -69,17 +71,18 @@ export const TripCard = ({
       </div>
       <Modal isOpen={isOpenModalDetail} toggleStatus={toggleStatusModalDetail}>
         <TripModalDetail
-          imageUrl={imageUrl}
+          photo_url={photo_url}
           title={title}
           description={description}
           itinerary={itinerary}
           id={id}
+          status={status}
           handleOnTripChangeStatus={handleOnTripChangeStatus}
         />
       </Modal>
       <Modal isOpen={isOpenModalEdit} toggleStatus={toggleStatusModalEdit}>
         <TripModalEdit
-          imageUrl={imageUrl}
+          photo_url={photo_url}
           title={title}
           description={description}
           itinerary={itinerary}
