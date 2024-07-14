@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchTrips } from "../services/get-trips";
+import { fetchTrips } from "../services/get-trips.service";
 import { TripsDTO } from "../interfaces/trips.dto.interface";
 
 export function useGetTrips() {
