@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# Dream Travels
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1728" alt="Screenshot 2024-07-14 at 17 17 38" src="https://github.com/user-attachments/assets/b68cd649-1de6-4664-a238-50ab6acd8a63">
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Is an app you can see different travels offers.
 
-## Expanding the ESLint configuration
+You can see the detail of each offer.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+You can create, delete and edit an offer.
 
-- Configure the top-level `parserOptions` property like this:
+You can see the detail of an offer and and set it as completed if you have already done it.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Enjoy !
+
+# The project
+
+To run the project in developement you have to run
+
+```bash
+npm install
+```
+The first time
+
+and then 
+
+```bash
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# The tests
+
+To run the test you have to run
+
+```bash
+npm run test
+```
+
+Here I use Vitest to simulate the DOM because it works more easily with Vite than Jest.
+
+To run the test coverages
+
+```bash
+npm run coverage
+```
+
+You will see a folder coverage appearing in the at the root dream-travel folder.
+You can unfold the coverage folder and open the html file. You will see a complete view on the test coverage.
+
+<img width="1187" alt="Screenshot 2024-07-14 at 17 15 45" src="https://github.com/user-attachments/assets/084add46-7d09-4436-8d91-99e3f11bf07a">
+
+
