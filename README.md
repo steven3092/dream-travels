@@ -46,7 +46,7 @@ To run the test coverages
 npm run coverage
 ```
 
-You will see a folder coverage appearing in the at the root dream-travel folder.
+You will see a folder coverage appearing in  at the root dream-travel folder.
 You can unfold the coverage folder and open the html file. You will see a complete view on the test coverage.
 
 <img width="1187" alt="Screenshot 2024-07-14 at 17 15 45" src="https://github.com/user-attachments/assets/084add46-7d09-4436-8d91-99e3f11bf07a">
