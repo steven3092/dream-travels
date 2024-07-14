@@ -31,34 +31,6 @@ function App() {
     toggleStatusModalCreate();
   };
 
-  const handleOnTripEditSubmit = (trip: TripsDTO) => {
-    handleUpdateTrip(trip);
-  };
-
-  const handleOnTripChangeStatus = (trip: TripsDTO) => {
-    handleUpdateTrip(trip);
-  };
-
-  const handleOnTripSearch = (search: string) => {
-    handleSearchTrip(search);
-  };
-
-  const handleOnDeleteTrip = (id: number) => {
-    handleDeleteTrip(id);
-  };
-
-  const handleOnClickAllTrips = (trips: TripsDTO[]) => {
-    handleAllTrips(trips);
-  };
-
-  const handleOnClickUpcomingTrips = () => {
-    handleUpcomingTrips();
-  };
-
-  const handleOnClickCompletedTrips = (status: string) => {
-    handleCompletedTrips(status);
-  };
-
   return (
     <div className="main-view">
       <Nav>
@@ -71,27 +43,28 @@ function App() {
           onClick={toggleStatusModalCreate}
         />
       </Nav>
-      <SearchBar handleOnTripSearch={handleOnTripSearch} />
+      <SearchBar handleOnTripSearch={handleSearchTrip} />
       <ButtonGroup
         leftButton="All"
         middleButton="Upcoming"
         rightButton="Completed"
-        handleOnClickAllTrips={handleOnClickAllTrips}
-        handleOnClickUpcomingTrips={handleOnClickUpcomingTrips}
-        handleOnClickCompletedTrips={handleOnClickCompletedTrips}
+        handleOnClickAllTrips={handleAllTrips}
+        handleOnClickUpcomingTrips={handleUpcomingTrips}
+        handleOnClickCompletedTrips={handleCompletedTrips}
       />
       {state &&
         state.map((trip, index) => (
           <div key={index}>
             <TripCard
-              imageUrl={trip.photo_url}
+              photo_url={trip.photo_url}
               title={trip.title}
               description={trip.description}
               itinerary={trip.itinerary}
               id={trip.id}
-              handleOnDeleteTrip={handleOnDeleteTrip}
-              handleOnTripChangeStatus={handleOnTripChangeStatus}
-              handleOnTripEditSubmit={handleOnTripEditSubmit}
+              status={trip.status}
+              handleOnDeleteTrip={handleDeleteTrip}
+              handleOnTripChangeStatus={handleUpdateTrip}
+              handleOnTripEditSubmit={handleUpdateTrip}
             />
           </div>
         ))}
