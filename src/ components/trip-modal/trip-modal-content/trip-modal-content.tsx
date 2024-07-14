@@ -22,7 +22,7 @@ export const TripModalContent = () => {
       </span>
       <label>Image</label>
       <span className="trip-modal-input-image">
-        <Input type="text" placeholder="Image URL" name="imageUrl" />
+        <Input type="text" placeholder="Image URL" name="photo_url" />
       </span>
     </div>
   );

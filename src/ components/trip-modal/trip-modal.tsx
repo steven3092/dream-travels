@@ -4,7 +4,7 @@ import { TripModalItinerary } from "./trip-modal-itinerary/trip-modal-itinerary"
 import { TripModalContent } from "./trip-modal-content/trip-modal-content";
 import { FormEvent } from "react";
 import { ItineraryDTO, TripsDTO } from "../../interfaces/trips.dto.interface";
-import { useTripModalItinerary } from "./trip-modal-itinerary/hooks/use-trip-modal";
+import { useTripModalItinerary } from "./trip-modal-itinerary/hooks/use-trip-modal-itinerary";
 
 export const TripModal = ({
   onSubmit,
@@ -28,7 +28,7 @@ export const TripModal = ({
       id: 7,
       itinerary: itinerary as ItineraryDTO[],
       description: formData.get("description") as string,
-      photo_url: formData.get("imageUrl") as string,
+      photo_url: formData.get("photo_url") as string,
       status: "todo",
       title: formData.get("name") as string,
     };
