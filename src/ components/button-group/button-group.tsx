@@ -1,4 +1,3 @@
-import { useGetTrips } from "../../hooks/use-get-trips";
 import { useTrips } from "../../hooks/use-trips/use-trips";
 import { TripsDTO } from "../../interfaces/trips.dto.interface";
 import "./button-group.scss";
