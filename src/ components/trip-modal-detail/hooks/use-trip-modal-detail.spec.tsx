@@ -16,12 +16,6 @@ const mockTrip = {
   ],
 };
 
-const fakeForm = document.createElement("form");
-const statusInput = document.createElement("input");
-statusInput.setAttribute("name", "status");
-statusInput.setAttribute("value", "completed");
-fakeForm.appendChild(statusInput);
-
 const buildForm = () => {
   const fakeForm = document.createElement("form");
   const statusInput = document.createElement("input");
