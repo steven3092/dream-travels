@@ -17,7 +17,7 @@ describe("TripModal", () => {
     render(<TripModal onSubmit={mockOnSubmit} />);
 
     expect(screen.getByText("Create a trip")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /save/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Save/i })).toBeInTheDocument();
   });
 
   it("should call onSubmit with correct data when form is submitted", async () => {
