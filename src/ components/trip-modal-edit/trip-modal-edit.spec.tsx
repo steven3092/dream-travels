@@ -1,7 +1,8 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { vi } from "vitest";
 import { TripModalEdit } from "./trip-modal-edit";
+import userEvent from "@testing-library/user-event";
 
 const mockTrip = {
   photo_url: "test-url",
@@ -29,27 +30,26 @@ describe("TripModalEdit", () => {
     expect(screen.getByPlaceholderText("Image URL")).toBeInTheDocument();
   });
 
-  it("should call handleOnTripEditSubmit and handleOnCloseModalEdit on form submit", () => {
+  it("should call handleOnTripEditSubmit and handleOnCloseModalEdit on form submit", async () => {
+    const user = userEvent.setup();
     render(<TripModalEdit {...mockTrip} />);
 
-    fireEvent.input(screen.getByPlaceholderText("Italy"), {
-      target: { value: "Updated Trip" },
-    });
+    await user.type(screen.getByPlaceholderText("Italy"), " Updated Trip");
+    expect(screen.getByPlaceholderText("Italy")).toHaveValue(
+      "Test Trip Updated Trip"
+    );
 
-    fireEvent.input(
+    await user.type(
       screen.getByPlaceholderText(
         "Discover the wonders of the Roman empire..."
       ),
-      {
-        target: { value: "Updated Description" },
-      }
+      " Updated Description"
     );
+    expect(
+      screen.getByPlaceholderText("Discover the wonders of the Roman empire...")
+    ).toHaveValue("Test Description Updated Description");
 
-    fireEvent.input(screen.getByPlaceholderText("Image URL"), {
-      target: { value: "updated-url" },
-    });
-
-    fireEvent.submit(screen.getByTestId("trip-modal-edit-form"));
+    await user.click(screen.getByRole("button", { name: /save/i }));
 
     expect(mockTrip.handleOnTripEditSubmit).toHaveBeenCalledTimes(1);
     expect(mockTrip.handleOnCloseModalEdit).toHaveBeenCalledTimes(1);

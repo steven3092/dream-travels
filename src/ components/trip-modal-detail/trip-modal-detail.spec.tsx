@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, it, expect, vi } from "vitest";
 import { TripModalDetail } from "./trip-modal-detail";
@@ -66,7 +66,8 @@ describe("TripModalDetail", () => {
     expect(mockHandleOnClickTripStatus).toHaveBeenCalled();
   });
 
-  it("should call handleOnSubmitModalDetailForm when form is submitted", () => {
+  it("should call handleOnSubmitModalDetailForm when form is submitted", async () => {
+    const user = userEvent.setup();
     render(
       <TripModalDetail
         photo_url={mockTrip.photo_url}
@@ -80,7 +81,7 @@ describe("TripModalDetail", () => {
     );
 
     const form = screen.getByRole("form");
-    fireEvent.submit(form);
+    await user.click(form);
 
     expect(mockHandleOnSubmitModalDetailForm).toHaveBeenCalled();
   });
