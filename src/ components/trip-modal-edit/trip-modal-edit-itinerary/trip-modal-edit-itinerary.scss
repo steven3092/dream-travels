@@ -1,6 +1,7 @@
 .trip-modal-edit-itinerary {
   display: flex;
   flex-direction: column;
+  padding: 0px 20px 0px 20px;
 }
 
 .trip-modal-edit-itinerary-title {
@@ -8,7 +9,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 0px 10px 0px;
 }
 
 .plus-button {
@@ -19,8 +20,6 @@
   background-color: #f3f3f3;
   border-radius: 16px;
   padding: 10px;
-  margin: 0px 20px 20px 20px;
+  margin-bottom: 20px;
   display: flex;
-  margin-right: 40px;
-  width: 90%;
 }
