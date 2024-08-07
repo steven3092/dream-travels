@@ -6,7 +6,8 @@
 }
 
 .search-bar-sub-components {
-  width: 360px;
+  width: 80%;
+  margin-left: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,8 +23,8 @@
 }
 
 .search-bar-button {
-  position: absolute;
-  margin-left: 265px;
+  position: relative;
+  right: 82px;
   width: 75px;
   padding: 12px;
   border-radius: 100px;
