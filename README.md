@@ -2,7 +2,7 @@
 
 Available here : https://dream-travels-prod.netlify.app
 
-<img width="1728" alt="Screenshot 2024-07-14 at 17 17 38" src="https://github.com/user-attachments/assets/b68cd649-1de6-4664-a238-50ab6acd8a63">
+<img width="1489" alt="Capture d’écran 2024-08-07 à 17 36 54" src="https://github.com/user-attachments/assets/8a3cac32-1e87-460c-8b38-c0f67a82118c">
 
 
 Is an app you can see different travels offers.
