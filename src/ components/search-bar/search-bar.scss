@@ -7,7 +7,7 @@
 
 .search-bar-sub-components {
   width: 80%;
-  margin-left: 70px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,12 +23,30 @@
 }
 
 .search-bar-button {
-  position: relative;
-  right: 82px;
+  position: absolute;
+  right: 22%;
   width: 75px;
   padding: 12px;
   border-radius: 100px;
   cursor: pointer;
   color: white;
   background-color: black;
+}
+
+@media (width > 400px) {
+  .search-bar-button {
+    right: 20%;
+  }
+}
+
+@media (width > 600px) {
+  .search-bar-button {
+    right: 16%;
+  }
+}
+
+@media (width > 1000px) {
+  .search-bar-button {
+    right: 14%;
+  }
 }
