@@ -14,7 +14,7 @@ async function enableMocking() {
     return;
   }
 
-  const { worker } = await import("./mock/browser");
+  const { worker } = await import("./mocks/browser");
 
   return worker.start();
 }
