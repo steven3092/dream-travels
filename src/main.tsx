@@ -5,13 +5,24 @@ import "./index.css";
 
 const queryClient = new QueryClient();
 
-const rootElement = document.getElementById("root")!;
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
 
-if (!rootElement.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement);
+async function enableMocking() {
+  if (import.meta.env.VITE_USE_MOCKS_SERVICE_WORKER === "false") {
+    return;
+  }
+
+  const { worker } = await import("./mock/browser");
+
+  return worker.start();
+}
+
+enableMocking().then(() => {
   root.render(
     <QueryClientProvider client={queryClient}>
       <App />
     </QueryClientProvider>
   );
-}
+});
