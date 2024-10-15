@@ -10,7 +10,7 @@ type UseTripsReducerAction =
   | { type: "SEARCH_TRIP"; search: string }
   | { type: "FILTER_ALL_TRIPS"; trips: TripsDTO[] }
   | { type: "FILTER_UPCOMING_TRIPS" }
-  | { type: "FILTER_COMPLETED_TRIPS"; status: string };
+  | { type: "FILTER_COMPLETED_TRIPS" };
 
 export const useTripsReducer = () => {
   const { trips } = useGetTrips();
@@ -37,9 +37,9 @@ export const useTripsReducer = () => {
           )
         );
       case "FILTER_UPCOMING_TRIPS":
-        return state;
+        return state.filter((trip) => trip.status === "todo");
       case "FILTER_COMPLETED_TRIPS":
-        return state.filter((trip) => trip.status === action.status);
+        return state.filter((trip) => trip.status === "done");
       default:
         return state;
     }

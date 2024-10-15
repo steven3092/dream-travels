@@ -15,7 +15,7 @@ export const ButtonGroup = ({
   rightButton: string;
   handleOnClickAllTrips: (trips: TripsDTO[]) => void;
   handleOnClickUpcomingTrips: () => void;
-  handleOnClickCompletedTrips: (status: string) => void;
+  handleOnClickCompletedTrips: () => void;
 }) => {
   const { state } = useTrips();
 
@@ -27,10 +27,7 @@ export const ButtonGroup = ({
       <button className="btn" onClick={handleOnClickUpcomingTrips}>
         {middleButton}
       </button>
-      <button
-        className="btn"
-        onClick={() => handleOnClickCompletedTrips("completed")}
-      >
+      <button className="btn" onClick={handleOnClickCompletedTrips}>
         {rightButton}
       </button>
     </div>

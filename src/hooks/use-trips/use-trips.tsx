@@ -28,8 +28,8 @@ export const useTrips = () => {
     dispatch({ type: "FILTER_UPCOMING_TRIPS" });
   };
 
-  const handleCompletedTrips = (status: string) => {
-    dispatch({ type: "FILTER_COMPLETED_TRIPS", status: status });
+  const handleCompletedTrips = () => {
+    dispatch({ type: "FILTER_COMPLETED_TRIPS" });
   };
 
   return {
