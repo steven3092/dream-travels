@@ -21,7 +21,7 @@ const mockTrips: TripsDTO[] = [
   {
     id: 2,
     title: "Trip 2",
-    status: "completed",
+    status: "done",
     description: "Description 2",
     photo_url: "",
     itinerary: [],
@@ -126,10 +126,9 @@ describe("useTrips", () => {
 
   it("should filter completed trips", () => {
     const { result } = renderHook(() => useTrips());
-    const status = "completed";
 
     act(() => {
-      result.current.handleCompletedTrips(status);
+      result.current.handleCompletedTrips();
     });
 
     expect(useTripsReducerMock().dispatch).toHaveBeenCalledWith({

@@ -88,11 +88,11 @@ export const TripModalDetail = ({
           </button>
           <div className="checkbox-item-label">
             <input
-              value={checked ? "completed" : "todo"}
+              value={checked ? "done" : "todo"}
               name="status"
               type="hidden"
             />
-            {checked ? "Completed" : "Mark as completed"}
+            {checked ? "done" : "Mark as completed"}
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ const mockTrip = {
   photo_url: "some-image-url",
   title: "Trip to Lisbon",
   description: "A beautiful trip to Lisbon",
-  status: "todo" as "todo" | "completed",
+  status: "todo" as "todo" | "done",
   itinerary: [
     { day: "Day 1", description: "Visit Lisbon", location: "Lisbon" },
   ],
@@ -80,7 +80,7 @@ describe("useTripModalDetail", () => {
 
     expect(mockHandleOnTripChangeStatus).toHaveBeenCalledWith({
       ...mockTrip,
-      status: "completed",
+      status: "done",
     });
   });
 });

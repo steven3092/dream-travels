@@ -72,8 +72,6 @@ describe("ButtonGroup", () => {
     });
     await userEvent.click(rightButton);
 
-    expect(mockProps.handleOnClickCompletedTrips).toHaveBeenCalledWith(
-      "completed"
-    );
+    expect(mockProps.handleOnClickCompletedTrips).toHaveBeenCalledWith("done");
   });
 });

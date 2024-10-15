@@ -20,7 +20,7 @@ const mockTrips: TripsDTO[] = [
   {
     id: 2,
     title: "Trip 2",
-    status: "completed",
+    status: "done",
     description: "Description 2",
     photo_url: "",
     itinerary: [],
@@ -97,7 +97,6 @@ describe("useTripsReducer", () => {
     act(() => {
       result.current.dispatch({
         type: "FILTER_COMPLETED_TRIPS",
-        status: "completed",
       });
     });
 

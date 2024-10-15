@@ -14,7 +14,7 @@ const mockTrips = [
   {
     id: 2,
     title: "Trip 2",
-    status: "completed",
+    status: "done",
     description: "Description 2",
     photo_url: "",
     itinerary: [],
@@ -61,7 +61,7 @@ describe("useGetTrips", () => {
           {
             id: 2,
             title: "Trip 2",
-            status: "completed",
+            status: "done",
             description: "Description 2",
             photo_url: "",
             itinerary: [],
