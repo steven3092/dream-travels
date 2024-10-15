@@ -17,7 +17,7 @@ export const useTripModalDetail = ({
   title: string;
   description: string;
   id: number;
-  status: "todo" | "completed";
+  status: "todo" | "done";
   handleOnTripChangeStatus: (trip: TripsDTO) => void;
   itinerary: ItineraryDTO[];
 }) => {
@@ -35,7 +35,7 @@ export const useTripModalDetail = ({
       itinerary: itinerary,
       description: description,
       photo_url: photo_url,
-      status: formData.get("status") as "todo" | "completed",
+      status: formData.get("status") as "todo" | "done",
       title: title,
     };
 

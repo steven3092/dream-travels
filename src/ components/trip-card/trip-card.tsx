@@ -21,7 +21,7 @@ export const TripCard = ({
   description: string;
   itinerary: ItineraryDTO[];
   id: number;
-  status: "todo" | "completed";
+  status: "todo" | "done";
   handleOnTripChangeStatus: (trip: TripsDTO) => void;
   handleOnTripEditSubmit: (trip: TripsDTO) => void;
   handleOnDeleteTrip: (id: number) => void;

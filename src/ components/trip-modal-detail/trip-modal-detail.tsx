@@ -20,7 +20,7 @@ export const TripModalDetail = ({
   title: string;
   description: string;
   id: number;
-  status: "todo" | "completed";
+  status: "todo" | "done";
   handleOnTripChangeStatus: (trip: TripsDTO) => void;
   itinerary: ItineraryDTO[];
 }) => {
